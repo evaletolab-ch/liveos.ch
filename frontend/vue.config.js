@@ -2,7 +2,7 @@ module.exports = {
     devServer: {
       proxy: {
         '/cockpit': {
-          target: 'https://pavillonnoir-fishing.ch/',
+          target: 'https://liveos.ch/',
           changeOrigin: true
         }
       }

@@ -40,18 +40,10 @@ package-lock.json
 .DS_Store
 Thumbs.db
 
-/usb-os/live-debianfs
-/usb-os/chroot.debianfs*
-/usb-os/chroot-dir.debianfs
-/usb-os/live-config
-
-design/
 
 composer.lock
 package-lock.json
 backend/tools/assets/*
-backend/cockpit/assets/*
-backend/cockpit/lib/*
 backend/cockpit/install/*
 backend/cockpit/storage/api*
 backend/cockpit/modules/*

@@ -8,6 +8,7 @@
     "pull": "node pull.js",
     "pull-code": "node pull-code.js",
     "push-code": "node push-code.js",
+    "push-install": "node push-install.js",
     "content": "node content.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

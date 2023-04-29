@@ -1,6 +1,7 @@
 
 # default testing user 
 
+* http://localhost:8080/singletons/form/landing
 
 # install cockpit v1
 * cd backend
@@ -28,6 +29,8 @@
 # load data from liveos.ch
 * `cd backend/tools && npm i`
 * update `.env` file
+
+
 
 
 
