@@ -3,7 +3,7 @@
 return [
 
     # cockpit session name
-    'app.name' => 'MEG ensemble',
+    'app.name' => 'LiVeOS',
 
     /* # cockpit session name
     'session.name' => 'mysession',
