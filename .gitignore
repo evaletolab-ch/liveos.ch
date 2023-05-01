@@ -46,6 +46,8 @@ package-lock.json
 backend/tools/assets/*
 backend/cockpit/install/*
 backend/cockpit/storage/api*
+backend/cockpit/assets/*
+backend/cockpit/lib/*
 backend/cockpit/modules/*
 backend/cockpit/tests/*
 backend/cockpit/storage/thumbs
