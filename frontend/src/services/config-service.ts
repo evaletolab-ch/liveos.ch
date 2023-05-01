@@ -4,7 +4,7 @@ import axios from 'axios';
 const defaultAxios = {
   'Cache-Control': 'no-cache',
   'Content-Type': 'application/json',
-  'Cockpit-Token': '670247b310890efb247195166ab2a4' 
+  'Cockpit-Token': '6723fb3f89bb020254ee9016489927' 
 };
 
 class ConfigService {

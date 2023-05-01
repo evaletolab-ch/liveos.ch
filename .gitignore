@@ -53,6 +53,7 @@ backend/cockpit/tests/*
 backend/cockpit/storage/thumbs
 backend/cockpit*.tar.gz
 /node_modules
+.env
 
 !.gitignore
 !.gitkeep

@@ -2,7 +2,7 @@ const ftp = require("basic-ftp");
 require('dotenv').config();
 const { join } = require('path');
 
-const localCockpitRoot = '../cockpit';
+const localCockpitRoot = './dist';
 
 async function uploadDir(client, path){
     const localPath = join(localCockpitRoot, path);
@@ -39,11 +39,12 @@ async function push() {
 
         await client.cd("/");
 
-        await uploadDir(client, "dist/js");
-        await uploadDir(client, "dist/css");
-        await uploadDir(client, "dist/fonts");
-        await uploadDir(client, "dist/images");
-        await client.uploadFrom("dist/index.html", "dist/favicon.ico")
+        await uploadDir(client, "js");
+        await uploadDir(client, "css");
+        await uploadDir(client, "fonts");
+        await uploadDir(client, "images");
+        await client.uploadFrom("dist/index.html","/index.html")
+        await client.uploadFrom("dist/favicon.ico","/favicon.ico")
         await printPwd(client);
 
 
