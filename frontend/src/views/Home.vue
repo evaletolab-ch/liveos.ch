@@ -23,7 +23,7 @@
                             <div class="intro">
                                 <h1>{{content.intro_title}}</h1>
                                 <p>{{content.intro_tagline}}</p>
-                                <a class="btn vira-btn" :href="content.intro_cta_link"> <span class="icon"></span> {{content.intro_cta_text}}</a>
+                                <a class="btn vira-btn" :href="content.intro_cta_link"> {{content.intro_cta_text}}</a>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
-                            <h2 class="title">Notre passion</h2>                          
+                            <h2 class="title">{{ content.introl_description_title }}</h2>                          
                             <p v-html="content.intro_description">
                             </p>
                             <span> </span>
@@ -54,14 +54,14 @@
                 <div class="vira-card">
                     <div class="vira-card-content hide">
                     </div>
-                    <div class="vira-card-header">
-                        <img class="img-responsive" :src="work.value.image.path">
-                    </div>
-
                     <div class="vira-card-content">
-                      <h3>{{ index+1 }}. {{ work.value.title }}</h3>
+                      <h3>{{ work.value.title }}</h3>
                         <p v-html="work.value.content">
                         </p>
+                    </div>
+
+                    <div class="vira-card-header">
+                        <img class="img-responsive" :src="work.value.image.path">
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
     </section> 
 
     <!-- OUR PHOTOS -->
-    <div class="photo-container">
+    <div class="photo-container" v-if="content.ourwork_photos && content.ourwork_photos.length">
           <h2 class="title">La Gallerie photos</h2>
           <div class="photos">
             <div class="photo" v-for="(photo,index) in content.ourwork_photos" :key="index" @click="event=> currentPhoto = photo.path">
@@ -194,7 +194,7 @@
     padding: 5px;
     width: calc( 100% / 3 - 10px );
     .vira-card .vira-card-header{
-      height: 550px;
+      height: 250px;
     }
   }
   @media (max-width:768px) {
@@ -208,7 +208,12 @@
   }
 }
 
-.intro a.btn{
+.intro {
+  h1 {
+    text-transform:none;
+  }
+
+  a.btn{
     white-space:normal!important;
     letter-spacing: 1px;
     padding: 15px 30px;
@@ -223,13 +228,16 @@
       margin: -11px;
       margin-right: 5px;
     }
+  }
+
 }
+
 
 .intro-box {
   img {
-    width: 220px;
+    width: 160px;
     position: absolute;
-    left: calc(50% - 110px);
+    left: calc(50% - 80px);
     top: 24px;
     opacity: 0.99;
   }
