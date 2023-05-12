@@ -223,7 +223,7 @@ section{
 	left: calc(50% - 22px);
 }
 .vira-card .vira-card-content p{
-	font-size: 17px;
+	font-size: 18px;
 	text-align: left;
 }
 .vira-card .vira-card-content p a {
@@ -390,11 +390,12 @@ section{
 
 
 /*Home page*/
-.header{
+.header,canvas{
 	height: 100vh;
 	position: relative;
 	min-height: 659px;
 }
+
 
 .intro-box{
 	height: 100vh;
